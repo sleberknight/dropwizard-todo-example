@@ -1,0 +1,36 @@
+
+database:
+  driverClass: org.h2.Driver
+  user: todo
+  password: todo
+  url: jdbc:h2:tcp://localhost/~/todo
+  validationQuery: "/* MyApplication Health Check */ SELECT 42"
+  properties:
+    charSet: UTF-8
+
+server:
+  applicationConnectors:
+    - type: http
+      port: 8080
+  adminConnectors:
+    - type: http
+      port: 8081
+
+logging:
+  level: INFO
+  loggers:
+    com.fortitudetec.example.todo: DEBUG
+    org.hibernate.SQL: DEBUG
+
+  appenders:
+    - type: console
+
+    - type: file
+      threshold: INFO
+      logFormat: "%-6level [%d{HH:mm:ss.SSS}] [%t] %logger{5} - %X{code} %msg %n"
+      currentLogFilename: /tmp/application.log
+      archivedLogFilenamePattern: /tmp/application-%d{yyyy-MM-dd}-%i.log.gz
+      archivedFileCount: 7
+      timeZone: UTC
+#      maxFileSize: 10MB
+
