@@ -26,7 +26,7 @@ Then the following dependency declared in the POM file will be resolved properly
 
 In the `TodoApplication` class in the `run()` method, we are creating a new application context and adding the
 Dropwizard configuration object and `ManagedDataSource` as parent beans. These parent beans are then accessible
-in the Sprint application context, whether you are using Java Config or XML configuration.
+in the Spring application context, whether you are using Java Config or XML configuration.
 
 ```java
 ApplicationContext context = new SpringContextBuilder()
