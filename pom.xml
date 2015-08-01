@@ -11,6 +11,8 @@
     <artifactId>dropwizard-todo-example</artifactId>
     <version>0.1.0</version>
     <name>Dropwizard Todo Example</name>
+    <packaging>jar</packaging>
+    <url>https://github.com/sleberknight/dropwizard-todo-example</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
