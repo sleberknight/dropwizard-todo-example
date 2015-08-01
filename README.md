@@ -14,7 +14,7 @@ Spring JDBC, and so on and you want to use Spring to drive transactions.
 
 To use `SpringContextBuilder` you'll first need to install the JAR in your Maven repository. To do that you will need to
 clone the repository at https://github.com/sleberknight/spring-appcontext-builder and then `mvn install` it.
-Then the dependency declared in the POM file will resolved properly.
+Then the following dependency declared in the POM file will be resolved properly.
 
 ```xml
 <dependency>
