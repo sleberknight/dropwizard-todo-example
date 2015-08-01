@@ -12,6 +12,18 @@ The main reasons you might want to do this are:
 * you aren't using Hibernate, in which case there is no `@UnitOfWork` annotation for things like plain JDBC, JDBI,
 Spring JDBC, and so on and you want to use Spring to drive transactions.
 
+To use `SpringContextBuilder` you'll first need to install the JAR in your Maven repository. To do that you will need to
+clone the repository at https://github.com/sleberknight/spring-appcontext-builder and then `mvn install` it.
+Then the dependency declared in the POM file will resolved properly.
+
+```xml
+<dependency>
+    <groupId>com.fortitudetec</groupId>
+    <artifactId>spring-appcontext-builder</artifactId>
+    <version>0.1.0</version>
+</dependency>
+```
+
 In the `TodoApplication` class in the `run()` method, we are creating a new application context and adding the
 Dropwizard configuration object and `ManagedDataSource` as parent beans. These parent beans are then accessible
 in the Sprint application context, whether you are using Java Config or XML configuration.
